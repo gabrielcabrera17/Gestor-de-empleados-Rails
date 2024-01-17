@@ -1,0 +1,31 @@
+
+@import "bootstrap";
+
+/* application.scss */
+
+.nav-link {
+  font-size: 32px; /* Tamaño de la fuente deseado */
+}
+/*Alinear buscador*/
+.form-inline {
+  margin-left: 10px; /* Alinea a la derecha */
+}
+
+
+.navbar-nav {
+  margin: 0 auto; /* Centra horizontalmente */
+  display: flex;
+  align-items: center;
+}
+
+/* Agrega estilos para ajustar el botón del formulario */
+.form-inline button {
+  margin-left: 200px; /* Ajusta el margen izquierdo del botón según tus necesidades */
+}
+/* application.scss o tu archivo de estilos */
+.custom-form .custom-margin {
+  margin-top: 10px !important; /* Ajusta el margen superior según tus necesidades */
+}
+
+
+

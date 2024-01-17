@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Gestor de Empleados</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #333;">
+    <a class="navbar-brand" href="#">
+      <img src="/Imagen/logo1.png" alt="Logo" width="200" height="200" class="d-inline-block align-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%=link_to "Inicio", root_path, class: "nav-link",style: "color: #fff; font-weight: bold; font-family: Arial;"%>
+        </li>
+        <li class="nav-item">
+          <%=link_to "Lista de empleados", employees_path, class: "nav-link",style: "color: #fff; font-weight: bold; font-family: Arial;"%>
+        </li>
+
+        <li class="nav-item">
+          <%=link_to "Nuevo Empleado", new_employee_path, class: "nav-link",style: "color: #fff; font-weight: bold; font-family: Arial;"%>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 ml-auto custom-form" action="<%= search_employees_path %>" method="get">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+        <button class="btn btn-outline-success my-2 my-sm-0 custom-margin">Buscar Empleado</button>
+      </form>
+
+    </div>
+  </nav>
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

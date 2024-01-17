@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_employee: MyString
+  city: one
+  function: one
+  state: one
+
+two:
+  name_employee: MyString
+  city: two
+  function: two
+  state: two

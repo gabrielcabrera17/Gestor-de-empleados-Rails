@@ -1,0 +1,8 @@
+<h1>Resultados de la Búsqueda</h1>
+
+<% @employees.each do |employee| %>
+  <div>
+    <%= link_to employee.name_employee, employee %>
+    <!-- Puedes mostrar más información sobre el empleado aquí -->
+  </div>
+<% end %>

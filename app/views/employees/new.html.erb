@@ -1,0 +1,12 @@
+<h1>Nuevo Empleado</h1>
+
+<div class="container">
+  <%= render "form", employee: @employee %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to employees", employees_path, class: "btn btn-secondary" %>
+  </div>
+</div>
+

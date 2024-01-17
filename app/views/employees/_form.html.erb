@@ -1,0 +1,37 @@
+<%= form_with(model: employee) do |form| %>
+  <% if employee.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+        <% employee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name_employee, style: "display: block" %>
+    <%= form.text_field :name_employee %>
+  </div>
+
+  <div>
+    <%= form.label :city_id, style: "display: block" %>
+    <%= form.collection_select(:city_id, @citys, :id, :name_city, prompt: 'Seleccione una ciudad') %>
+  </div>
+
+  <div>
+    <%= form.label :function_id, style: "display: block" %>
+    <%= form.collection_select(:function_id,@functions, :id, :name_function, prompt: 'Seleccione un cargo')%>
+  </div>
+
+  <div>
+    <%= form.label :state_id, style: "display: block" %>
+    <%= form.collection_select(:state_id,@states, :id, :name_state, prompt: 'Seleccione un Estado')%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
